@@ -47,7 +47,7 @@ class AppFixtures extends Fixture
         $product = new Product();
         $product->setName('Fish');
         $product->setDescription('2 kg');
-        $product->setVolume(1);
+        $product->setVolume(1.5);
         $product->setExpirationDate(new \DateTime('+ 90 day'));
         $product->setCreatedAt(new \DateTime());
         $product->setSection($section);
