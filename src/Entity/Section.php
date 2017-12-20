@@ -73,7 +73,7 @@ class Section
     /**
      * Set volume.
      *
-     * @param integer $volume
+     * @param int $volume
      *
      * @return self
      */

@@ -56,9 +56,9 @@ class AppFixtures extends Fixture
         $manager->flush();
     }
 
-/**
- * {@inheritdoc}
- */
+    /**
+     * {@inheritdoc}
+     */
     public function getOrder()
     {
         return 1;
