@@ -35,14 +35,9 @@ class Product
     private $description;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="decimal")
      */
     private $volume;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $temperature;
 
     /**
      * @ORM\Column(type="date", name="expiration_date")
@@ -137,47 +132,23 @@ class Product
     /**
      * Get volume.
      *
-     * @return int
+     * @return float
      */
-    public function getVolume(): int
+    public function getVolume(): float
     {
-        return (int) $this->volume;
+        return (float) $this->volume;
     }
 
     /**
      * Set volume.
      *
-     * @param integer $volume
+     * @param float $volume
      *
      * @return self
      */
-    public function setVolume(int $volume): self
+    public function setVolume(float $volume): self
     {
         $this->volume = $volume;
-
-        return $this;
-    }
-
-    /**
-     * Get temperature.
-     *
-     * @return int
-     */
-    public function getTemperature(): int
-    {
-        return (int) $this->temperature;
-    }
-
-    /**
-     * Set temperature.
-     *
-     * @param integer $temperature
-     *
-     * @return self
-     */
-    public function setTemperature(int $temperature): self
-    {
-        $this->temperature = $temperature;
 
         return $this;
     }

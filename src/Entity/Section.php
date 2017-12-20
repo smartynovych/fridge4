@@ -29,11 +29,6 @@ class Section
     private $volume;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $temperature;
-
-    /**
      * @return int
      */
     public function getId(): int
@@ -85,30 +80,6 @@ class Section
     public function setVolume(int $volume): self
     {
         $this->volume = $volume;
-
-        return $this;
-    }
-
-    /**
-     * Get temperature.
-     *
-     * @return int
-     */
-    public function getTemperature(): int
-    {
-        return (int) $this->temperature;
-    }
-
-    /**
-     * Set temperature.
-     *
-     * @param integer $temperature
-     *
-     * @return self
-     */
-    public function setTemperature(int $temperature): self
-    {
-        $this->temperature = $temperature;
 
         return $this;
     }
