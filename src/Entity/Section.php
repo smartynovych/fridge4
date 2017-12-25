@@ -29,6 +29,11 @@ class Section
     private $volume;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $description;
+
+    /**
      * @return int
      */
     public function getId(): int
@@ -80,6 +85,30 @@ class Section
     public function setVolume(int $volume): self
     {
         $this->volume = $volume;
+
+        return $this;
+    }
+
+    /**
+     * Get description.
+     *
+     * @return string
+     */
+    public function getDescription(): string
+    {
+        return (string) $this->description;
+    }
+
+    /**
+     * Set description.
+     *
+     * @param string $description
+     *
+     * @return self
+     */
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }

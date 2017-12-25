@@ -1,0 +1,8 @@
+ViewAll:
+    type: object
+    config:
+        description: "."
+        fields:
+            view:
+                type: "[View]"
+                description: "A product detail information"

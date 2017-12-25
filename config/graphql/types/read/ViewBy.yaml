@@ -1,0 +1,8 @@
+ViewBy:
+    type: object
+    config:
+        description: "A product list information"
+        fields:
+            view:
+                type: "[View]"
+                description: "A product detail information"

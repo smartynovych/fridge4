@@ -1,0 +1,26 @@
+View:
+    type: object
+    config:
+        description: "."
+        fields:
+            id:
+                type: "Int"
+                description: "The unique ID of the product."
+            name:
+                type: "String"
+                description: "Name of the product"
+            description:
+                type: "String"
+                description: "Description of the product"
+            volume:
+                type: "Float"
+                description: "Volume of the product, dm³"
+            expirationDate:
+                type: "Date"
+                description: "Product expiration date³"
+            createdAt:
+                type: "DateTime"
+                description: "Date created"
+            section:
+                type: "Section"
+                description: "A section detail information"

@@ -1,0 +1,7 @@
+SortedByEnum:
+    type: enum
+    config:
+        description: "."
+        values:
+            ASC: "ASC"
+            DESC: "DESC"

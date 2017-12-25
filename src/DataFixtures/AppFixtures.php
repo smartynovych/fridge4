@@ -18,7 +18,16 @@ class AppFixtures extends Fixture
 
         $product = new Product();
         $product->setName('Bear');
-        $product->setDescription('1 bottle');
+        $product->setDescription('1 bottle, light');
+        $product->setVolume(0.5);
+        $product->setExpirationDate(new \DateTime('+ 7 day'));
+        $product->setCreatedAt(new \DateTime());
+        $product->setSection($section);
+        $manager->persist($product);
+
+        $product = new Product();
+        $product->setName('Bear');
+        $product->setDescription('1 bottle, dark');
         $product->setVolume(0.5);
         $product->setExpirationDate(new \DateTime('+ 14 day'));
         $product->setCreatedAt(new \DateTime());
@@ -48,7 +57,7 @@ class AppFixtures extends Fixture
         $product->setName('Fish');
         $product->setDescription('2 kg');
         $product->setVolume(1.5);
-        $product->setExpirationDate(new \DateTime('+ 90 day'));
+        $product->setExpirationDate(new \DateTime('- 30 day'));
         $product->setCreatedAt(new \DateTime());
         $product->setSection($section);
         $manager->persist($product);

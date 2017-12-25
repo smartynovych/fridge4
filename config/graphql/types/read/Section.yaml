@@ -1,0 +1,14 @@
+Section:
+    type: object
+    config:
+        description: "."
+        fields:
+            id:
+                type: "Int"
+                description: "The unique ID of the section."
+            name:
+                type: "String"
+                description: "Name of the section"
+            volume:
+                type: "Float"
+                description: "Total volume of the section, dm³"

@@ -1,0 +1,6 @@
+Date:
+    type: custom-scalar
+    config:
+        serialize: ["App\\GraphQL\\Type\\Date", "serialize"]
+        parseValue: ["App\\GraphQL\\Type\\Date", "parseValue"]
+        parseLiteral: ["App\\GraphQL\\Type\\Date", "parseLiteral"]

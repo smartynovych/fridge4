@@ -1,0 +1,34 @@
+Query:
+    type: object
+    config:
+        description: "Project - Fridge 4.0"
+        fields:
+            view:
+                type: "View"
+                args:
+                    id:
+                        description: "ID of the product."
+                        type: "Int"
+                resolve: "@=resolver('View', [args])"
+            viewAll:
+                type: "ViewAll"
+                resolve: "@=resolver('ViewAll', [args])"
+            viewBy:
+                type: "ViewBy"
+                args:
+                    criteria:
+                        description: ""
+                        type: "ProductInput"
+                    orderBy:
+                        description: ""
+                        type: "ProductSortedInput"
+                    limit:
+                        description: ""
+                        type: "Int"
+                    offset:
+                        description: ""
+                        type: "Int"
+                resolve: "@=resolver('ViewBy', [args])"
+            viewAllExpired:
+                type: "ViewAllExpired"
+                resolve: "@=resolver('ViewAllExpired', [args])"

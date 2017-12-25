@@ -1,0 +1,26 @@
+ProductSortedInput:
+    type: input-object
+    config:
+        description: "A product information"
+        fields:
+            id:
+                type: "SortedByEnum"
+                description: "The unique ID of the product."
+            name:
+                type: "SortedByEnum"
+                description: "Name of the product"
+            description:
+                type: "SortedByEnum"
+                description: "Description of the product"
+            volume:
+                type: "SortedByEnum"
+                description: "Volume of the product, dm³"
+            expirationDate:
+                type: "SortedByEnum"
+                description: "Product expiration date³"
+            createdAt:
+                type: "SortedByEnum"
+                description: "Date created"
+            section_name:
+                type: "SortedByEnum"
+                description: "Product place location"

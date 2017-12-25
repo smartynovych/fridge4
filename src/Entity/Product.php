@@ -62,9 +62,9 @@ class Product
      *
      * @return int
      */
-    public function getSection(): int
+    public function getSection()
     {
-        return (int) $this->section;
+        return $this->section;
     }
 
     /**

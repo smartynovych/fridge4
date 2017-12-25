@@ -1,0 +1,14 @@
+SectionEnum:
+    type: enum
+    config:
+        description: "."
+        values:
+            Main:
+                value: 1
+                description: "."
+            Door:
+                value: 2
+                description: "."
+            Freezer:
+                value: 3
+                description: "."
