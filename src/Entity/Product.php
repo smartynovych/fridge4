@@ -19,8 +19,8 @@ class Product
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Section", cascade={"remove"})
-     * @ORM\JoinColumn(name="section_id", referencedColumnName="id", onDelete="CASCADE")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Section", inversedBy="products")
+     * @ORM\JoinColumn(nullable=true)
      */
     private $section;
 
