@@ -46,6 +46,8 @@ class Section
     }
 
     /**
+     * Get id.
+     *
      * @return int
      */
     public function getId(): int
@@ -126,6 +128,8 @@ class Section
     }
 
     /**
+     * Get products.
+     *
      * @return Collection|Product[]
      */
     public function getProducts()
