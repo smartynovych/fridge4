@@ -7,7 +7,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  */
 class Product
 {
@@ -60,9 +60,9 @@ class Product
     /**
      * Get section.
      *
-     * @return int
+     * @return Section
      */
-    public function getSection()
+    public function getSection(): Section
     {
         return $this->section;
     }

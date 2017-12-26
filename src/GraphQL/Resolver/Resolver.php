@@ -2,6 +2,7 @@
 
 namespace App\GraphQL\Resolver;
 
+use App\Entity\Product;
 use Doctrine\ORM\EntityManager;
 use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
@@ -44,14 +45,7 @@ class Resolver implements ResolverInterface, AliasedInterface
 
     public function viewAllExpired()
     {
-        $query = $this->em->getRepository('App:Product')->createQueryBuilder('p');
-
-        $query->leftJoin('p.section', 's');
-        $query->where($query->expr()->lt('p.expirationDate', ':expirationDate'));
-        $query->setParameter('expirationDate', new \DateTime());
-        $query->addOrderBy('p.expirationDate', 'ASC');
-
-        $product = $query->getQuery()->getResult();
+        $product =$this->em->getRepository(Product::class)->findByExpiredDate(new \DateTime('-1 day'));
 
         return ['view' => $product];
     }

@@ -14,13 +14,14 @@ class AppFixtures extends Fixture
         $section = new Section();
         $section->setName('Main');
         $section->setVolume(150);
+        $section->setDescription('Main section');
         $manager->persist($section);
 
         $product = new Product();
         $product->setName('Bear');
         $product->setDescription('1 bottle, light');
         $product->setVolume(0.5);
-        $product->setExpirationDate(new \DateTime('+ 7 day'));
+        $product->setExpirationDate(new \DateTime());
         $product->setCreatedAt(new \DateTime());
         $product->setSection($section);
         $manager->persist($product);
@@ -37,6 +38,7 @@ class AppFixtures extends Fixture
         $section = new Section();
         $section->setName('Door');
         $section->setVolume(10);
+        $section->setDescription('Door section');
         $manager->persist($section);
 
         $product = new Product();
@@ -51,6 +53,7 @@ class AppFixtures extends Fixture
         $section = new Section();
         $section->setName('Freezer');
         $section->setVolume(50);
+        $section->setDescription('Freezer section');
         $manager->persist($section);
 
         $product = new Product();
@@ -63,13 +66,5 @@ class AppFixtures extends Fixture
         $manager->persist($product);
 
         $manager->flush();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getOrder()
-    {
-        return 1;
     }
 }

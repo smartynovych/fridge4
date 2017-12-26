@@ -1,4 +1,4 @@
-SortedByEnum:
+OrderByEnum:
     type: enum
     config:
         description: "."
