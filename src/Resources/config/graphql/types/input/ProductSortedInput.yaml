@@ -1,7 +1,7 @@
 ProductSortedInput:
     type: input-object
     config:
-        description: "A product information"
+        description: "."
         fields:
             id:
                 type: "OrderByEnum"

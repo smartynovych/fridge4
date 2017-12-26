@@ -9,7 +9,7 @@ use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
 use Overblog\GraphQLBundle\Definition\Resolver\MutationInterface;
 use Overblog\GraphQLBundle\Definition\Argument;
 
-class Mutation implements MutationInterface, AliasedInterface
+class ProductMutation implements MutationInterface, AliasedInterface
 {
     private $em;
 

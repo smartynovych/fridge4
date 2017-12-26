@@ -18,7 +18,7 @@ Query:
                 args:
                     criteria:
                         description: ""
-                        type: "ProductInput"
+                        type: "ProductViewInput"
                     orderBy:
                         description: ""
                         type: "ProductSortedInput"

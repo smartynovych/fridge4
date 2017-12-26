@@ -1,11 +1,8 @@
-ProductInput:
+ProductMutationInput:
     type: input-object
     config:
-        description: "A product information"
+        description: "."
         fields:
-            id:
-                type: "Int"
-                description: "The unique ID of the product."
             name:
                 type: "String"
                 description: "Name of the product"
@@ -22,5 +19,5 @@ ProductInput:
                 type: "DateTime"
                 description: "Date created, format dd.mm.yyyy hh:mm:ss"
             section:
-                type: "SectionEnum"
+                type: "SectionEnum!"
                 description: "Product place location"

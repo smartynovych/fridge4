@@ -8,7 +8,7 @@ Mutation:
                 resolve: "@=mutation('Create', [args])"
                 args:
                     input:
-                        type: ProductInput!
+                        type: ProductMutationInput!
             update:
                 type: ProductResult!
                 resolve: "@=mutation('Update', [args])"
@@ -16,7 +16,7 @@ Mutation:
                     id:
                         type: "Int!"
                     input:
-                        type: ProductInput!
+                        type: ProductMutationInput!
             delete:
                 type: "String"
                 args:

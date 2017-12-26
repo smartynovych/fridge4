@@ -8,7 +8,7 @@ use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Definition\Resolver\AliasedInterface;
 use Overblog\GraphQLBundle\Definition\Resolver\ResolverInterface;
 
-class Resolver implements ResolverInterface, AliasedInterface
+class ProductResolver implements ResolverInterface, AliasedInterface
 {
     private $em;
 

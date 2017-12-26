@@ -1,0 +1,26 @@
+ProductViewInput:
+    type: input-object
+    config:
+        description: "."
+        fields:
+            id:
+                type: "Int"
+                description: "The unique ID of the product."
+            name:
+                type: "String"
+                description: "Name of the product"
+            description:
+                type: "String"
+                description: "Description of the product"
+            volume:
+                type: "Float"
+                description: "Volume of the product, dm³"
+            expirationDate:
+                type: "DateTime"
+                description: "Product expiration date, format dd.mm.yyyy"
+            createdAt:
+                type: "DateTime"
+                description: "Date created, format dd.mm.yyyy hh:mm:ss"
+            section:
+                type: "SectionEnum"
+                description: "Product place location"
