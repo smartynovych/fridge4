@@ -17,10 +17,10 @@ ProductInput:
                 description: "Volume of the product, dm³"
             expirationDate:
                 type: "DateTime"
-                description: "Product expiration date³"
+                description: "Product expiration date, format dd.mm.yyyy"
             createdAt:
                 type: "DateTime"
-                description: "Date created"
+                description: "Date created, format dd.mm.yyyy hh:mm:ss"
             section:
                 type: "SectionEnum"
                 description: "Product place location"

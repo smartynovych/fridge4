@@ -1,0 +1,32 @@
+Mutation:
+    type: object
+    config:
+        description: "."
+        fields:
+            create:
+                type: ProductResult!
+                resolve: "@=mutation('Create', [args])"
+                args:
+                    input:
+                        type: ProductInput!
+            update:
+                type: ProductResult!
+                resolve: "@=mutation('Update', [args])"
+                args:
+                    id:
+                        type: "Int!"
+                    input:
+                        type: ProductInput!
+            delete:
+                type: "String"
+                args:
+                    id:
+                        type: "Int!"
+                        description: "The unique ID of the product."
+                resolve: "@=mutation('Delete', [args['id']])"
+ProductResult:
+    type: object
+    config:
+        fields:
+            id:
+                type: "Int"

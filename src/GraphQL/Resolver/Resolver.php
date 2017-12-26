@@ -45,7 +45,7 @@ class Resolver implements ResolverInterface, AliasedInterface
 
     public function viewAllExpired()
     {
-        $product =$this->em->getRepository(Product::class)->findByExpiredDate(new \DateTime('-1 day'));
+        $product = $this->em->getRepository(Product::class)->findByExpiredDate(new \DateTime('-1 day'));
 
         return ['view' => $product];
     }
