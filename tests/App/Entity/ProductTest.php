@@ -3,15 +3,11 @@
 namespace Tests\App\Entity;
 
 use App\Entity\Product;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use App\Entity\Section;
+use PHPUnit\Framework\TestCase;
 
-class ProductTest extends KernelTestCase
+class ProductTest extends TestCase
 {
-    /**
-     * @var \Doctrine\ORM\EntityManager
-     */
-    private $em;
-
     /**
      * @var Product
      */
@@ -22,12 +18,6 @@ class ProductTest extends KernelTestCase
      */
     protected function setUp()
     {
-        self::bootKernel();
-
-        $this->em = static::$kernel->getContainer()
-            ->get('doctrine')
-            ->getManager();
-
         $this->product = new Product();
     }
 
@@ -91,7 +81,7 @@ class ProductTest extends KernelTestCase
      */
     public function testSection()
     {
-        $section = $this->em->getRepository('App:Section')->findOneBy(['name' => 'Main']);
+        $section = new Section();
         $this->product->setSection($section);
         $this->assertSame($section, $this->product->getSection());
     }

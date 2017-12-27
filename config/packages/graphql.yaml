@@ -2,8 +2,9 @@ overblog_graphql:
     definitions:
         internal_error_message: "An error occurred, please retry later or contact us!"
         schema:
-            query: Query
-            mutation: Mutation
+            fridge:
+                query: Query
+                mutation: Mutation
         mappings:
             auto_discover: false
             types:

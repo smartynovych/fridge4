@@ -3,14 +3,11 @@
 namespace Tests\App\Entity;
 
 use App\Entity\Section;
-use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Doctrine\Common\Collections\ArrayCollection;
+use PHPUnit\Framework\TestCase;
 
-class SectionTest extends KernelTestCase
+class SectionTest extends TestCase
 {
-    /**
-     * @var \Doctrine\ORM\EntityManager
-     */
-    private $em;
 
     /**
      * @var section
@@ -22,12 +19,6 @@ class SectionTest extends KernelTestCase
      */
     protected function setUp()
     {
-        self::bootKernel();
-
-        $this->em = static::$kernel->getContainer()
-            ->get('doctrine')
-            ->getManager();
-
         $this->section = new Section();
     }
 
@@ -69,8 +60,8 @@ class SectionTest extends KernelTestCase
      */
     public function testProducts()
     {
-        $section = $this->em->getRepository('App:Section')->findOneBy(['name' => 'Main']);
+        $section = new Section();
         $products = $section->getProducts();
-        $this->assertEquals('Bear', $products[0]->getName());
+        $this->assertInstanceOf(ArrayCollection::class, $products);
     }
 }

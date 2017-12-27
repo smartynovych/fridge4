@@ -16,6 +16,7 @@
     },
     "require-dev": {
         "overblog/graphiql-bundle": "^0.1.0@beta",
+        "symfony/browser-kit": "^4.0",
         "symfony/dotenv": "^4.0"
     },
     "config": {

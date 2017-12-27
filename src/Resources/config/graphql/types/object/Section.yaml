@@ -9,6 +9,9 @@ Section:
             name:
                 type: "String"
                 description: "Name of the section"
+            description:
+                type: "String"
+                description: "Description of the section"
             volume:
                 type: "Float"
                 description: "Total volume of the section, dm³"

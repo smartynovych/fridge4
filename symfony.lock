@@ -110,6 +110,9 @@
     "psr/simple-cache": {
         "version": "1.0.0"
     },
+    "symfony/browser-kit": {
+        "version": "v4.0.2"
+    },
     "symfony/cache": {
         "version": "v4.0.2"
     },
@@ -132,6 +135,9 @@
         "version": "v4.0.2"
     },
     "symfony/doctrine-bridge": {
+        "version": "v4.0.2"
+    },
+    "symfony/dom-crawler": {
         "version": "v4.0.2"
     },
     "symfony/dotenv": {
