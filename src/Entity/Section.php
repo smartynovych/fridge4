@@ -40,6 +40,9 @@ class Section
      */
     private $products;
 
+    /**
+     * Section constructor.
+     */
     public function __construct()
     {
         $this->products = new ArrayCollection();

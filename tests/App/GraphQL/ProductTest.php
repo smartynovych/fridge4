@@ -6,6 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
 class ProductTest extends WebTestCase
 {
+    /**
+     * New product list
+     *
+     * @var array
+     */
     private $products = [
         'CocaCola' => [
             'description' => 'Refreshing Drink',
@@ -27,6 +32,11 @@ class ProductTest extends WebTestCase
         ],
     ];
 
+    /**
+     * Product list after update
+     *
+     * @var array
+     */
     private $updateProducts = [
         'CocaCola' => [
             'description' => 'Refreshing Drink',
@@ -56,6 +66,9 @@ class ProductTest extends WebTestCase
         self::bootKernel();
     }
 
+    /**
+     * Try to add products
+     */
     public function testCreate()
     {
         $client = static::createClient();
@@ -77,6 +90,9 @@ class ProductTest extends WebTestCase
         }
     }
 
+    /**
+     * Try to change products
+     */
     public function testUpdate()
     {
         $client = static::createClient();
@@ -109,6 +125,9 @@ class ProductTest extends WebTestCase
         }
     }
 
+    /**
+     * Try to view All products
+     */
     public function testView()
     {
         $client = static::createClient();
@@ -145,6 +164,9 @@ class ProductTest extends WebTestCase
         $this->assertGreaterThan(0, $result->data->view->section->id);
     }
 
+    /**
+     * Try to view some products
+     */
     public function testViewBy()
     {
         $client = static::createClient();
@@ -207,6 +229,9 @@ class ProductTest extends WebTestCase
         $this->assertEquals($firstItemExpirationDate, $lastItem->expirationDate);
     }
 
+    /**
+     * Try to view All Expired products
+     */
     public function testViewAllExpired()
     {
         $client = static::createClient();
@@ -239,6 +264,9 @@ class ProductTest extends WebTestCase
         $this->assertGreaterThan(0, count($result->data->viewAllExpired->view));
     }
 
+    /**
+     * Try to view remove All products
+     */
     public function testDelete()
     {
         $client = static::createClient();
@@ -260,7 +288,12 @@ class ProductTest extends WebTestCase
         }
     }
 
-    private function viewAll()
+    /**
+     * Get all product list
+     *
+     * @return array
+     */
+    private function viewAll(): array
     {
         $client = static::createClient();
 

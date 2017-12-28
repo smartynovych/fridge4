@@ -4,8 +4,15 @@ namespace App\GraphQL\Type;
 
 use GraphQL\Language\AST\Node;
 
+/**
+ * Class DateTime
+ * @package App\GraphQL\Type
+ */
 class DateTime
 {
+    /**
+     * @var string
+     */
     public $name = 'DateTimeType';
 
     /**

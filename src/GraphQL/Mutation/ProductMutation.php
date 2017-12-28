@@ -10,15 +10,33 @@ use Overblog\GraphQLBundle\Definition\Resolver\MutationInterface;
 use Overblog\GraphQLBundle\Definition\Argument;
 use Overblog\GraphQLBundle\Error\UserError;
 
+/**
+ * Class ProductMutation
+ * @package App\GraphQL\Mutation
+ */
 class ProductMutation implements MutationInterface, AliasedInterface
 {
+    /**
+     * @var EntityManager
+     */
     private $em;
 
+    /**
+     * ProductMutation constructor.
+     * @param EntityManager $em
+     */
     public function __construct(EntityManager $em)
     {
         $this->em = $em;
     }
 
+    /**
+     * @param Argument $args
+     * @return Product
+     * @throws UserError
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
     public function create(Argument $args)
     {
         $section = $this->em->getRepository(Section::class)->find($args['input']['section']);
@@ -46,6 +64,13 @@ class ProductMutation implements MutationInterface, AliasedInterface
         return $product;
     }
 
+    /**
+     * @param Argument $args
+     * @return null|object
+     * @throws UserError
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
     public function update(Argument $args)
     {
         $product = $this->em->getRepository(Product::class)->find($args['id']);
@@ -82,6 +107,13 @@ class ProductMutation implements MutationInterface, AliasedInterface
         return $product;
     }
 
+    /**
+     * @param int $id
+     * @return string
+     * @throws UserError
+     * @throws \Doctrine\ORM\ORMException
+     * @throws \Doctrine\ORM\OptimisticLockException
+     */
     public function delete(int $id)
     {
         $product = $this->em->getRepository(Product::class)->find($id);
@@ -97,6 +129,9 @@ class ProductMutation implements MutationInterface, AliasedInterface
         return $status;
     }
 
+    /**
+     * @return array
+     */
     public static function getAliases()
     {
         return [

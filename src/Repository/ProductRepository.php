@@ -5,8 +5,16 @@ namespace App\Repository;
 use App\Entity\Section;
 use Doctrine\ORM\EntityRepository;
 
+/**
+ * Class ProductRepository
+ * @package App\Repository
+ */
 class ProductRepository extends EntityRepository
 {
+    /**
+     * @param \DateTime $date
+     * @return mixed
+     */
     public function findByExpiredDate(\DateTime $date)
     {
         $query = $this->_em->getRepository('App:Product')->createQueryBuilder('p')
@@ -19,6 +27,11 @@ class ProductRepository extends EntityRepository
         return $query->getQuery()->getResult();
     }
 
+    /**
+     * @param $sectionId
+     * @return mixed
+     * @throws \Doctrine\ORM\NonUniqueResultException
+     */
     public function getSumVolume($sectionId)
     {
         $query = $this->_em->getRepository('App:Product')->createQueryBuilder('p')
