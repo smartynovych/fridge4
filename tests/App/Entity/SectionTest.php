@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class SectionTest extends TestCase
 {
-
     /**
      * @var section
      */

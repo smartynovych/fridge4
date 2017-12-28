@@ -26,6 +26,12 @@ class AppFixtures extends Fixture
         $product->setSection($section);
         $manager->persist($product);
 
+        $section = new Section();
+        $section->setName('Door');
+        $section->setVolume(10);
+        $section->setDescription('Door section');
+        $manager->persist($section);
+
         $product = new Product();
         $product->setName('Bear');
         $product->setDescription('1 bottle, dark');
@@ -34,12 +40,6 @@ class AppFixtures extends Fixture
         $product->setCreatedAt(new \DateTime());
         $product->setSection($section);
         $manager->persist($product);
-
-        $section = new Section();
-        $section->setName('Door');
-        $section->setVolume(10);
-        $section->setDescription('Door section');
-        $manager->persist($section);
 
         $product = new Product();
         $product->setName('Eggs');
