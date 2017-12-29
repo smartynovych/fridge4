@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d55333cffd32bb2d237494dbe0e9e605",
+    "content-hash": "80dd7791f76a8077b98869ec34f9cff9",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -2147,16 +2147,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.51",
+            "version": "v1.0.53",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "adb823e2d21c88174a03f16a7b7eb9879b83107f"
+                "reference": "cc4b1bac464597ce220d4f8208c38c75195e80c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/adb823e2d21c88174a03f16a7b7eb9879b83107f",
-                "reference": "adb823e2d21c88174a03f16a7b7eb9879b83107f",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/cc4b1bac464597ce220d4f8208c38c75195e80c2",
+                "reference": "cc4b1bac464597ce220d4f8208c38c75195e80c2",
                 "shasum": ""
             },
             "require": {
@@ -2189,7 +2189,7 @@
                     "email": "fabien.potencier@gmail.com"
                 }
             ],
-            "time": "2017-12-20T00:55:17+00:00"
+            "time": "2017-12-27T16:06:01+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -3632,7 +3632,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.3",
+        "php": "^7.2",
         "ext-iconv": "*"
     },
     "platform-dev": []
