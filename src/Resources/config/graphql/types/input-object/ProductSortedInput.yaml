@@ -1,23 +1,23 @@
 ProductSortedInput:
     type: input-object
     config:
-        description: "."
+        description: "The sorted parameters list."
         fields:
             id:
                 type: "OrderByEnum"
-                description: "The unique ID of the product."
+                description: "Order by ID."
             name:
                 type: "OrderByEnum"
-                description: "Name of the product"
+                description: "Order by Name."
             description:
                 type: "OrderByEnum"
-                description: "Description of the product"
+                description: "Order by Description."
             volume:
                 type: "OrderByEnum"
-                description: "Volume of the product, dm³"
+                description: "Order by Volume."
             expirationDate:
                 type: "OrderByEnum"
-                description: "Product expiration date³"
+                description: "Order by Product expiration date."
             createdAt:
                 type: "OrderByEnum"
-                description: "Date created"
+                description: "Order by Create Date"

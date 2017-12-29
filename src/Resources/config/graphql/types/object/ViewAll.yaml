@@ -1,7 +1,7 @@
 ViewAll:
     type: object
     config:
-        description: "."
+        description: "A product list information"
         fields:
             view:
                 type: "[View]"

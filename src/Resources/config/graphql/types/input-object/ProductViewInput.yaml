@@ -1,7 +1,7 @@
 ProductViewInput:
     type: input-object
     config:
-        description: "."
+        description: "A product parameters list."
         fields:
             id:
                 type: "Int"

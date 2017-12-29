@@ -1,7 +1,7 @@
 Query:
     type: object
     config:
-        description: "Project - Fridge 4.0"
+        description: "The query root of Fridge's GraphQL interface."
         fields:
             view:
                 type: "View"
@@ -17,7 +17,7 @@ Query:
                 type: "ViewBy"
                 args:
                     criteria:
-                        description: ""
+                        description: "Search criteria"
                         type: "ProductViewInput"
                     orderBy:
                         description: ""

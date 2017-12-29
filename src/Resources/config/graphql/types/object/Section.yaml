@@ -1,7 +1,7 @@
 Section:
     type: object
     config:
-        description: "."
+        description: "The fridge section parameters."
         fields:
             id:
                 type: "Int"
@@ -13,5 +13,5 @@ Section:
                 type: "String"
                 description: "Description of the section"
             volume:
-                type: "Float"
+                type: "Int"
                 description: "Total volume of the section, dm³"

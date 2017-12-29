@@ -1,7 +1,7 @@
 Mutation:
     type: object
     config:
-        description: "."
+        description: "The root query for implementing GraphQL mutations."
         fields:
             create:
                 type: ProductResult!

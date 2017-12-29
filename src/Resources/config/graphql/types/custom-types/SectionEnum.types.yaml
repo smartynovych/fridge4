@@ -1,14 +1,14 @@
 SectionEnum:
     type: enum
     config:
-        description: "."
+        description: "The fridge section list."
         values:
             Main:
                 value: 1
-                description: "."
+                description: "Section Main."
             Door:
                 value: 2
-                description: "."
+                description: "Section Door."
             Freezer:
                 value: 3
-                description: "."
+                description: "Section Freezer."
