@@ -4,22 +4,22 @@ Symfony 4.0 project with use GraphQL
 
 # Installation
 
-1) git clone git@github.com:smartynovych/fridge4.git
+1) `git clone git@github.com:smartynovych/fridge4.git`
 
-2) composer install
+2) `composer install`
 
-3) php bin/console do:da:cr
+3) `php bin/console do:da:cr`
 
-4) php bin/console do:sc:up --force
+4) `php bin/console do:sc:up --force`
 
-5) php bin/console do:fi:lo -n
+5) `php bin/console do:fi:lo -n`
 
-6) php -S 127.0.0.1:8080 -t public
+6) 
+run server: `php -S 127.0.0.1:8080 -t public`
 
-# Docker run
-docker-compose up
+or use Docker: `docker-compose up`
 
-# Use
+# Using
 API Interface:
   http://127.0.0.1:8080/graphql/fridge
   
