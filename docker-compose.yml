@@ -1,0 +1,28 @@
+version: '2'
+
+services:
+
+    sqlite3:
+      image: nouchka/sqlite3:latest
+      stdin_open: true
+      tty: true
+      volumes:
+      - ./db/:/root/db/
+
+    nginx-php-fpm:
+      image: richarvey/nginx-php-fpm:1.4.1
+      restart: always
+      container_name: nginx-php-fpm
+      environment:
+        PGID: 'id -g $USER'
+        PUID: 'id -u $USER'
+        SKIP_CHOWN: '1'
+        WEBROOT: '/var/www/html/public'
+      ports:
+        - "8080:8080"
+      command: bash -c "composer install && php /var/www/html/bin/console doctrine:database:create && php /var/www/html/bin/console doctrine:schema:update --force && php /var/www/html/bin/console doctrine:fixture:load -n && php -S 0.0.0.0:8080 -t public"
+      volumes:
+        - .:/var/www/html
+
+      links:
+        - sqlite3

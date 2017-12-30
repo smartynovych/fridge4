@@ -14,14 +14,17 @@ Symfony 4.0 project with use GraphQL
 
 5) php bin/console do:fi:lo -n
 
-6) php -S 127.0.0.1:8000 -t public
+6) php -S 127.0.0.1:8080 -t public
+
+# Docker run
+docker-compose up
 
 # Use
 API Interface:
-  http://127.0.0.1:8000/graphql/fridge
+  http://127.0.0.1:8080/graphql/fridge
   
 GraphQL Explorer
-  http://127.0.0.1:8000/graphiql
+  http://127.0.0.1:8080/graphiql
   
 # Examples
   - View name of all products:
