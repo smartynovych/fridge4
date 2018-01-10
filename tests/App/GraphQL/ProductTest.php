@@ -82,7 +82,7 @@ class ProductTest extends WebTestCase
                 }
             ', $product, $params['description'], $params['volume'], $params['expirationDate'], $params['section']);
 
-            $client->request('GET', '/graphql/fridge', ['query' => $request]);
+            $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
             $json = $client->getResponse()->getContent();
             $result = json_decode($json);
 
@@ -117,7 +117,7 @@ class ProductTest extends WebTestCase
                 $this->updateProducts[$product->name]['section']
             );
 
-            $client->request('GET', '/graphql/fridge', ['query' => $request]);
+            $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
             $json = $client->getResponse()->getContent();
             $result = json_decode($json);
 
@@ -156,7 +156,7 @@ class ProductTest extends WebTestCase
             }
         ', $productId);
 
-        $client->request('GET', '/graphql/fridge', ['query' => $request]);
+        $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
         $json = $client->getResponse()->getContent();
         $result = json_decode($json);
 
@@ -192,7 +192,7 @@ class ProductTest extends WebTestCase
             }
         ';
 
-        $client->request('GET', '/graphql/fridge', ['query' => $request]);
+        $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
         $json = $client->getResponse()->getContent();
         $result = json_decode($json);
 
@@ -221,7 +221,7 @@ class ProductTest extends WebTestCase
             }
         ';
 
-        $client->request('GET', '/graphql/fridge', ['query' => $request]);
+        $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
         $json = $client->getResponse()->getContent();
         $result = json_decode($json);
 
@@ -257,7 +257,7 @@ class ProductTest extends WebTestCase
             }
         ';
 
-        $client->request('GET', '/graphql/fridge', ['query' => $request]);
+        $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
         $json = $client->getResponse()->getContent();
         $result = json_decode($json);
 
@@ -280,7 +280,7 @@ class ProductTest extends WebTestCase
             ', $product->id
             );
 
-            $client->request('GET', '/graphql/fridge', ['query' => $request]);
+            $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
             $json = $client->getResponse()->getContent();
             $result = json_decode($json);
 
@@ -318,7 +318,7 @@ class ProductTest extends WebTestCase
             }
         ';
 
-        $client->request('GET', '/graphql/fridge', ['query' => $request]);
+        $client->request('GET', '/api/graphql/fridge', ['query' => $request]);
         $json = $client->getResponse()->getContent();
         $result = json_decode($json);
 
